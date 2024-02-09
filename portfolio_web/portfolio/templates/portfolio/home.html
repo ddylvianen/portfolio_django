@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href='{% static "/css/index.css" %}'>
+    <link rel="stylesheet" href='{% static "/css/algemeen.css" %}'>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dylan Vianen</h1>
+            <div>
+                <a href="{% url "home" %}"><p>Home</p></a>
+                <a href="{% url "over_mij" %}"><p>Over mij</p></a>
+                <a href="{% url "services" %}"><p>Services</p></a>
+                <a href="{% url "contact" %}"><p>Contact</p></a>
+            </div>
+            <span></span>
+            <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
+        </header>
+        <section class="welkoms_container">
+            <img src="{% static '/photos/index/fotovanmij.jpg' %}" alt="foto van mij">
+            <div class="text_wlkm">
+                <h1 class="welkom_txt">Hey, ik ben Dylan</h1>
+                <p>Een junior software developer in Suriname</p>
+            </div>
+        </section>
+        <!--django temp begin ( op 4 houden!)-->
+        <section class="werken_container">
+            <a href="mijn_werk"><h2>Mijn nieuwste werken</h2></a>
+            <div class="werken_temp">
+                {% block content %}
+                {% for werk in werken %}
+                <div>
+                    <img src='{{ link }}{{ werk.img }}' alt="{{ werk.title }}" class="img_werk">
+                    <p>{{ werk.title }}</p>
+                </div>
+                {% endfor %}
+                {% endblock %}
+            </div>
+        </section>
+        <!--django temp end-->
+        <footer class="flex">
+            <div class="flex">
+                <a href="https://www.instagram.com/dylan.ceb.rm/">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>dylan.ceb.rm</p>
+                </a>
+                <a href="https://www.facebook.com/jan.steen.98837399/">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>jan steen</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dylan-vianen-160113218/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>dylan vianen</p>
+                </a>
+            </div>
+            <span></span>
+            <p>&copy;Copyright 2024</p>
+        </footer>
+    </div>
+</body>
+</html>

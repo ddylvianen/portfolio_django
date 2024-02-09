@@ -1,0 +1,28 @@
+.overmij_cont{
+    position: relative;
+}
+
+#slideshow{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    justify-content: start;
+}
+
+
+#slideshow:hover{
+    cursor: pointer;
+}
+
+#slideshow > img{
+    width: 15vw;
+    height: auto;
+    margin: 0 3%;
+    
+}
+
+.text{
+    width: 50%;
+    margin: 2% auto 0;
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+.contact_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.contact_cont > form{
+ display: flex;
+ flex-direction: column;
+ row-gap: 2vh;
+}
+
+.contact_cont > form > div{
+    width: 15%;
+    display: flex;
+    width: 100%;
+    column-gap: 1vw;
+    justify-content: space-between;
+}

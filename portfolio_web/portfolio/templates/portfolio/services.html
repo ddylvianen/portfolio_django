@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href='{% static "/css/services.css" %}'>
+    <link rel="stylesheet" href='{% static "/css/algemeen.css" %}'>
+
+    <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dylan Vianen</h1>
+            <div>
+                <a href="{% url "home" %}"><p>Home</p></a>
+                <a href="{% url "over_mij" %}"><p>Over mij</p></a>
+                <a href="{% url "services" %}"><p>Services</p></a>
+                <a href="{% url "contact" %}"><p>Contact</p></a>
+            </div>
+            <span></span>
+            <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
+        </header>
+        <span></span>
+        <!--django temp begin-->
+        <section class="services_cont">
+                <img src="{% static '/photos/overmij/full_stack_developer.svg' %}"
+                alt="foto van full stack development">
+                <h2>full stack development</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptates mollitia nulla quo reprehenderit eius suscipit 
+                    deleniti sapiente praesentium tempora sint. Modi, quidem dolorem? 
+                    A, repudiandae porro iusto eveniet quae ab.
+                </p>
+        </section>
+        <!--django temp end-->
+        <span></span>
+        <footer class="flex">
+            <div class="flex">
+                <a href="https://www.instagram.com/dylan.ceb.rm/">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>dylan.ceb.rm</p>
+                </a>
+                <a href="https://www.facebook.com/jan.steen.98837399/">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>jan steen</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dylan-vianen-160113218/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>dylan vianen</p>
+                </a>
+            </div>
+            <span></span>
+            <p>&copy;Copyright 2024</p>
+        </footer>
+    </div>
+</body>
+</html>

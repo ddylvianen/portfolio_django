@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href='{% static "/css/over_mij.css" %}'>
+    <link rel="stylesheet" href='{% static "/css/algemeen.css" %}'>
+   
+    <script src="{% static 'jquery/jquery.js' %}"></script>
+    <script src="{% static 'jquery/plugins/jquery.cookie.js' %}"></script>
+    <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>
+   
+    <script src="{% static '/js/overmij.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dylan Vianen</h1>
+            <div>
+                <a href="{% url "home" %}"><p>Home</p></a>
+                <a href="{% url "over_mij" %}"><p>Over mij</p></a>
+                <a href="{% url "services" %}"><p>Services</p></a>
+                <a href="{% url "contact" %}"><p>Contact</p></a>
+            </div>
+            <span></span>
+            <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
+        </header>
+        <span></span>
+        <section class="overmij_cont">
+            <div id="slideshow">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+                <img src="https://placehold.co/900" alt="placehold">
+            </div>
+            <div class="text">
+                <h1>Ik ben Dylan Vianen,</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Maiores, suscipit cumque adipisci maxime iste tempore 
+                    soluta similique quas? Minima numquam officia quidem ex 
+                    aspernatur quisquam non unde recusandae ipsa pariatur.
+                </p>
+            </div>
+        </section>
+
+        <span></span>
+        <footer class="flex">
+            <div class="flex">
+                <a href="https://www.instagram.com/dylan.ceb.rm/">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>dylan.ceb.rm</p>
+                </a>
+                <a href="https://www.facebook.com/jan.steen.98837399/">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>jan steen</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dylan-vianen-160113218/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>dylan vianen</p>
+                </a>
+            </div>
+            <span></span>
+            <p>&copy; Copyright 2024</p>
+        </footer>
+    </div>
+</body>
+</html>

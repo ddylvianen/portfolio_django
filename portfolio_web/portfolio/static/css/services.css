@@ -1,0 +1,11 @@
+.services_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services_cont > img{
+    width: 25vw;
+    height: min-content;
+
+}
