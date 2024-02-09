@@ -5,7 +5,7 @@ from django.conf import settings
 import os
 
 def home(request):
-    werken = Projects.all().order_by('-id')[0:4]
+    werken = Projects.order_by('-id')[0:4]
     link = "/media/"
     
     return render(request, 'portfolio/home.html', {'werken': werken, 'link': link})
