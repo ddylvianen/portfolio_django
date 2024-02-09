@@ -8,9 +8,10 @@
     
     <link rel="stylesheet" href='{% static "/css/mijn_werk.css" %}'>
     <link rel="stylesheet" href='{% static "/css/algemeen.css" %}'>
+    <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
+    <div class="container">
         <header>
             <h1>Dylan Vianen</h1>
             <div>
@@ -22,29 +23,36 @@
             <span></span>
             <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
         </header>
+        <span></span>
         <!--django temp begin-->
-        <section> 
-            <a href="">
-                <img src="" alt="">
-                <p></p>
-            </a>
+        <section class="werken_cont"> 
+            {% block content %}
+            {% for werk in werken %}
+                <a href='{{ link }}{{ werk.img }}'>
+                    <img src='{{ link }}{{ werk.img }}' alt="{{ werk.title }}" class="img_werk">
+                    <h3>{{ werk.title }}</h3>
+                </a>
+            {% endfor %}
+            {% endblock %}
         </section>
+        <span></span>
          <!--django temp end-->
-        <footer>
-            <ul>
-                <li>
-                    <img src="" alt="">
-                    <p></p>
-                </li>
-                <li>
-                    <img src="" alt="">
-                    <p></p>
-                </li>
-                <li>
-                    <img src="" alt="">
-                    <p></p>
-                </li>
-            </ul>
+        <footer class="flex">
+            <div class="flex">
+                <a href="https://www.instagram.com/dylan.ceb.rm/">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>dylan.ceb.rm</p>
+                </a>
+                <a href="https://www.facebook.com/jan.steen.98837399/">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>jan steen</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dylan-vianen-160113218/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>dylan vianen</p>
+                </a>
+            </div>
+            <span></span>
             <p>&copy;Copyright 2024</p>
         </footer>
     </div>

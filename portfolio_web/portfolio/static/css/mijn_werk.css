@@ -1,0 +1,22 @@
+.werken_cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 5vh 0;
+    width: 80%;
+    height: 70%;
+    gap: 8vw;
+}
+
+.werken_cont > a{
+    width: min-content;
+    height: min-content;
+    text-align: center;
+}
+
+.werken_cont > a > img{
+    width: 15vw;
+    height: auto;
+}
