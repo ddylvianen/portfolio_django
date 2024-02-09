@@ -25,17 +25,19 @@
         </header>
         <span></span>
         <!--django temp begin-->
-        <h1 class="werk_head">mijn projecten</h1>
+        
         <section class="werken_cont">
-            
-            {% block content %}
-            {% for werk in werken %}
-                <a href='{{ link }}{{ werk.img }}'>
-                    <img src='{{ link }}{{ werk.img }}' alt="{{ werk.title }}" class="img_werk">
-                    <h3>{{ werk.title }}</h3>
-                </a>
-            {% endfor %}
-            {% endblock %}
+            <h1>Mijn projecten</h1>
+            <div>
+                {% block content %}
+                {% for werk in werken %}
+                    <a href='{{ link }}{{ werk.img }}'>
+                        <img src='{{ link }}{{ werk.img }}' alt="{{ werk.title }}" class="img_werk">
+                        <h3>{{ werk.title }}</h3>
+                    </a>
+                {% endfor %}
+                {% endblock %}
+            </div>
         </section>
         <span></span>
          <!--django temp end-->
