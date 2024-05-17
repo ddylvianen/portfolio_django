@@ -3,5 +3,6 @@ $(document).ready(function () {
 
    $("svg.dropd").on('click', function() {
     dropdown.stop().slideToggle(200);
+    $("#werk-m-link").removeClass("werk");
   });
 });

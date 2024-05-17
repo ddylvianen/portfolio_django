@@ -126,10 +126,6 @@ header > h1{
         display: unset;
     }
 
-    .werk{
-        position: relative;
-    }
-
     .link-cont{
         order: 1;
     }
