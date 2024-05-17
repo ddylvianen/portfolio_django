@@ -19,14 +19,13 @@
     <div class="container">
         <header>
             <h1>Dylan Vianen</h1>
-            <div>
-                <a href="{% url "home" %}"><p>Home</p></a>
-                <a href="{% url "over_mij" %}"><p>Over mij</p></a>
-                <a href="{% url "services" %}"><p>Services</p></a>
-                <a href="{% url "contact" %}"><p>Contact</p></a>
-            </div>
+            <a href="{% url "home" %}" id="nav"><p>Home</p></a>
+            <a href="{% url "over_mij" %}" class="nav"><p>Over mij</p></a>
+            <a href="{% url "services" %}" class="nav"><p>Services</p></a>
+            <a href="{% url "contact" %}" class="nav"><p>Contact</p></a>
             <span></span>
             <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
+
         </header>
         <span></span>
         <section class="overmij_cont">
@@ -60,15 +59,12 @@
             <div class="flex">
                 <a href="https://www.instagram.com/dylan.ceb.rm/">
                     <i class="fa-brands fa-instagram"></i>
-                    <p>dylan.ceb.rm</p>
                 </a>
                 <a href="https://www.facebook.com/jan.steen.98837399/">
                     <i class="fa-brands fa-facebook"></i>
-                    <p>jan steen</p>
                 </a>
                 <a href="https://www.linkedin.com/in/dylan-vianen-160113218/">
                     <i class="fa-brands fa-linkedin"></i>
-                    <p>dylan vianen</p>
                 </a>
             </div>
             <span></span>

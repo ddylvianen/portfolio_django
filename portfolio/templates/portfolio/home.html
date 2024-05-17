@@ -8,21 +8,31 @@
 
     <link rel="stylesheet" href='{% static "/css/index.css" %}'>
     <link rel="stylesheet" href='{% static "/css/algemeen.css" %}'>
-    <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>  
+    <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>
+    
+    <script src='{% static "jquery/jquery.js" %}'></script>
+    <script src='{% static "jquery/plugins/jquery.cookie.js" %}'></script>
+    <script src='{% static "jquery/plugins/jquery.parseQuery.js" %}'></script>
+    <script src='{% static "jquery/plugins/jquery.utils.js" %}'></script>
+    <script src='{% static "jquery/plugins/jquery.cookie.js" %}'></script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Dylan Vianen</h1>
-            <div>
-                <a href="{% url "home" %}"><p>Home</p></a>
-                <a href="{% url "over_mij" %}"><p>Over mij</p></a>
-                <a href="{% url "services" %}"><p>Services</p></a>
-                <a href="{% url "contact" %}"><p>Contact</p></a>
+            <span class="spacing-header"></span>
+            <div class="link-cont">
+                <a href='{% url "home" %}' class="link"><p>Home</p></a>
+                <a href='{% url "over_mij" %}' class="link"><p>Over mij</p></a>
+                <a href='{% url "services" %}' class="link"><p>Services</p></a>
+                <a href='{% url "contact" %}' class="link"><p>Contact</p></a>
+                <a href='{% url "mijn_werk" %}' class="link werk"><p>Mijn werk</p></a>
             </div>
             <span></span>
-            <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
+            <a class="mijn_werk" href='{% url "mijn_werk" %}'><p>Mijn werk</p></a>
+            <svg class="dropd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
         </header>
+        <span class="spacing-head-welk"></span>
         <section class="welkoms_container">
             <img src="{% static '/photos/index/fotovanmij.jpg' %}" alt="foto van mij">
             <div class="text_wlkm">
@@ -30,9 +40,10 @@
                 <p>Een junior software developer in Suriname</p>
             </div>
         </section>
+        <span ></span>
         <!--django temp begin ( op 4 houden!)-->
         <section class="werken_container">
-            <a href="mijn_werk"><h2>Mijn nieuwste werken</h2></a>
+            <a href="mijn_werk">Mijn nieuwste werken</a>
             <div class="werken_temp">
                 {% block content %}
                 {% for werk in werken %}
@@ -42,27 +53,27 @@
                 </a>
                 {% endfor %}
                 {% endblock %}
+            </div>
             </a>
         </section>
+        <span></span>
         <!--django temp end-->
         <footer class="flex">
             <div class="flex">
                 <a href="https://www.instagram.com/dylan.ceb.rm/">
                     <i class="fa-brands fa-instagram"></i>
-                    <p>dylan.ceb.rm</p>
                 </a>
                 <a href="https://www.facebook.com/jan.steen.98837399/">
                     <i class="fa-brands fa-facebook"></i>
-                    <p>jan steen</p>
                 </a>
                 <a href="https://www.linkedin.com/in/dylan-vianen-160113218/">
                     <i class="fa-brands fa-linkedin"></i>
-                    <p>dylan vianen</p>
                 </a>
             </div>
             <span></span>
             <p>&copy;Copyright 2024</p>
         </footer>
     </div>
+    <script src="{% static '/js/home.js' %}"></script>
 </body>
 </html>

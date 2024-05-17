@@ -6,25 +6,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5% 0;
+    /* margin: 10% 0 0; */
 }
 
 .welkoms_container > img{
     border-radius: 50px;
-    width: 10%;
-    height: 10%;
+    width: 15vw;
+    height: auto;
 }
 
 .text_wlkm{
     text-align: center;
 }
+
 .welkom_txt{
     display: block;
-    font-size: 80px;
+    font-size: 8vw;
 }
 
 .text_wlkm > p{
-    font-size: xx-large;
+    font-size: 4vw;
 }
 
 /*------------------------ end section welkom -----------------*/
@@ -33,16 +34,13 @@
 /*------------------------ begin section werken -----------------*/
 
 .werken_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     margin: 10% 0 5%;
 }
 
 .werken_container > a{
-    font-size: xx-large;
+    margin-left: 2vw;
+    font-size: 4vw;
+    font-weight: 900;
 }
 
 .werken_temp{
