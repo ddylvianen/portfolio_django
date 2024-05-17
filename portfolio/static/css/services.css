@@ -9,3 +9,7 @@
     height: min-content;
 
 }
+
+.services_cont > p{
+    max-width: 80%;
+}
