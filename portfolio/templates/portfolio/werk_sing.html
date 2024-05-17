@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
-    <link rel="stylesheet" href='{% static "/css/index.css" %}'>
+    <link rel="stylesheet" href='{% static "/css/werk.css" %}'>
     <link rel="stylesheet" href='{% static "/css/algemeen.css" %}'>
     
     <script src="https://kit.fontawesome.com/03deb1591a.js" crossorigin="anonymous"></script>
@@ -20,7 +20,8 @@
     <script src="{% static '/js/algemeen.js' %}"></script>
 </head>
 <body>
-    <div class="container">
+
+    <div class="container">    
         <header>
             <h1>Dylan Vianen</h1>
             <span class="spacing-header"></span>
@@ -35,27 +36,16 @@
             <a class="mijn_werk" href='{% url "mijn_werk" %}'><p>Mijn werk</p></a>
             <svg class="dropd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
         </header>
-        <span class="spacing-head-welk"></span>
-        <section class="welkoms_container">
-            <img src="{% static '/photos/index/fotovanmij.jpg' %}" alt="foto van mij">
-            <div class="text_wlkm">
-                <h1 class="welkom_txt">Hey, ik ben Dylan</h1>
-                <p>Een junior software developer in Suriname</p>
-            </div>
-        </section>
-        <span ></span>
-        <!--django temp begin ( op 4 houden!)-->
-        <section class="werken_container">
-            <a href="mijn_werk">Mijn nieuwste werken</a>
-            <div class="werken_temp">
-                {% for werk in werken %}
-                <a href="/werk/{{werk.id}}">
-                    <img src='{{ link }}{{ werk.img }}' alt="{{ werk.title }}" class="img_werk">
-                    <p>{{ werk.title }}</p>
-                </a>
-                {% endfor %}
-            </div>
+        <span></span>
+        <section class="werk_sing">
+            <a href="{{werk.url}}">
+                <h2>{{ werk.title }}</h2>
             </a>
+            <img src="{{ link }}{{werk.img}}" alt="{{werk.description}}">
+            <div>
+                <p>{{werk.description}}</p>
+                <small>{{werk.published_date}}</small>
+            </div>
         </section>
         <span></span>
         <!--django temp end-->
