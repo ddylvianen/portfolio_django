@@ -16,14 +16,17 @@
     <div class="container">
         <header>
             <h1>Dylan Vianen</h1>
-            <div>
-                <a href="{% url "home" %}"><p>Home</p></a>
-                <a href="{% url "over_mij" %}"><p>Over mij</p></a>
-                <a href="{% url "services" %}"><p>Services</p></a>
-                <a href="{% url "contact" %}"><p>Contact</p></a>
+            <span class="spacing-header"></span>
+            <div class="link-cont">
+                <a href='{% url "home" %}' class="link"><p>Home</p></a>
+                <a href='{% url "over_mij" %}' class="link"><p>Over mij</p></a>
+                <a href='{% url "services" %}' class="link"><p>Services</p></a>
+                <a href='{% url "contact" %}' class="link"><p>Contact</p></a>
+                <a href='{% url "mijn_werk" %}' class="link werk"><p>Mijn werk</p></a>
             </div>
             <span></span>
-            <a class="mijn_werk" href="{% url "mijn_werk" %}">Mijn werk</a>
+            <a class="mijn_werk" href='{% url "mijn_werk" %}'><p>Mijn werk</p></a>
+            <svg class="dropd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
         </header>
         <span></span>
         <!--django temp begin-->
